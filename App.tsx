@@ -1,7 +1,5 @@
 import React from 'react'
 
-import { Home } from './src/screens/Home'
-
 import {
   useFonts,
   Raleway_200ExtraLight,
@@ -16,6 +14,7 @@ import { ThemeProvider } from 'styled-components/native'
 
 import { StatusBar } from 'expo-status-bar'
 import theme from './src/theme'
+import Routes from './src/routes'
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -32,8 +31,8 @@ export default function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <StatusBar backgroundColor="light" />
-      <Home />
+      <StatusBar backgroundColor="#fff" />
+      <Routes />
     </ThemeProvider>
   )
 }
