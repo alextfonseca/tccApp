@@ -1,12 +1,39 @@
 import React from 'react'
-import { Text } from 'react-native'
+import { Header } from '../../components/Header'
 
-import { Container } from './styles'
+import { ListCard } from './components/ListCard'
+
+import {
+  Container,
+  ContainerSelectButton,
+  Content,
+  OptionButton,
+  OptionButtonText,
+  Title
+} from './styles'
 
 export function Home() {
   return (
     <Container>
-      <Text>Home</Text>
+      <Content>
+        <Header />
+
+        <Title>Olá Alex, tenha um bom dia</Title>
+
+        <ContainerSelectButton>
+          <OptionButton>
+            <OptionButtonText>Em alta</OptionButtonText>
+          </OptionButton>
+
+          <OptionButton style={{ backgroundColor: '#2A6100' }}>
+            <OptionButtonText>Recente</OptionButtonText>
+          </OptionButton>
+        </ContainerSelectButton>
+
+        <ListCard title={'Princiais parques públicos'} />
+        <ListCard title={'Princiais parques privados'} />
+        <ListCard title={'Guias de Turismo'} />
+      </Content>
     </Container>
   )
 }

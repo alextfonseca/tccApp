@@ -1,7 +1,9 @@
+import { useNavigation } from '@react-navigation/native'
 import React from 'react'
 
 import GoogleIcon from 'react-native-vector-icons/AntDesign'
 import FacebookIcon from 'react-native-vector-icons/EvilIcons'
+import { propsStack } from '../../../routes/stack/models/types'
 
 import {
   Container,
@@ -14,6 +16,8 @@ import {
 } from './styles'
 
 export function ModalLogin() {
+  const navigation = useNavigation<propsStack>()
+
   return (
     <Container>
       <Title>
@@ -21,7 +25,7 @@ export function ModalLogin() {
       </Title>
 
       <Content>
-        <FacebookButton>
+        <FacebookButton onPress={() => navigation.navigate('Home')}>
           <FacebookIcon name="sc-facebook" size={30} color={'#2A6100'} />
           <FacebookButtonText>ENTRE COM O FACEBOOK</FacebookButtonText>
         </FacebookButton>
