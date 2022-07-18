@@ -11,7 +11,9 @@ export default {
     white: '#ffffff',
     lightGreen: '#E7F9D9',
 
-    background: '#FBFFF8'
+    background: '#FBFFF8',
+
+    caution: '#EA4335'
   },
 
   fonts: {
