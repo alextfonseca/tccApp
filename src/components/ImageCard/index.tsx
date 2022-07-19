@@ -11,13 +11,28 @@ import {
   NameLocal
 } from './styles'
 
-import ImageCardBackground from '../../assets/startImageBackground.png'
+import { useNavigation } from '@react-navigation/native'
+import { propsStack } from '../../routes/stack/models/types'
 
 export function ImageCard() {
+  const data = {
+    local: 'Cachoeira',
+    city: 'São Roque ',
+    image: 'https://i.ibb.co/8XYLwbM/start-Image-Background.png'
+  }
+
+  const navigation = useNavigation<propsStack>()
+
   return (
     <Container>
-      <ContainerCard>
-        <Image source={ImageCardBackground} />
+      <ContainerCard
+        onPress={() => navigation.navigate('AboutLocation', { data })}
+      >
+        <Image
+          source={{
+            uri: 'https://i.ibb.co/8XYLwbM/start-Image-Background.png'
+          }}
+        />
 
         <ContentCard>
           <NameLocal>
@@ -27,8 +42,14 @@ export function ImageCard() {
         </ContentCard>
       </ContainerCard>
 
-      <ContainerCard>
-        <Image source={ImageCardBackground} />
+      <ContainerCard
+        onPress={() => navigation.navigate('AboutLocation', { data })}
+      >
+        <Image
+          source={{
+            uri: 'https://i.ibb.co/8XYLwbM/start-Image-Background.png'
+          }}
+        />
 
         <ContentCard>
           <NameLocal>
